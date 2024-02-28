@@ -29,7 +29,7 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(bottomleft = (PLAYER_POS_X, GROUND_POS_Y))
         self.gravity = 0
         
-        self.jump_sound = pygame.mixer.Sound('./tutorial/assets/audios/jump.mp3')
+        self.jump_sound = pygame.mixer.Sound('./tutorial/assets/sounds/jump.mp3')
         self.jump_sound.set_volume(0.2)
     
     def player_input(self):
@@ -122,11 +122,11 @@ class SoundManager():
     def __init__(self):
         pygame.mixer.init()
         self.musics = {
-            'start' : pygame.mixer.Sound('./tutorial/assets/audios/title.wav'),
-            'level1' : pygame.mixer.Sound('./tutorial/assets/audios/level1.wav'),
-            'level2' : pygame.mixer.Sound('./tutorial/assets/audios/level2.wav'),
-            'level3' : pygame.mixer.Sound('./tutorial/assets/audios/level3.wav'),
-            'ending' : pygame.mixer.Sound('./tutorial/assets/audios/ending.wav'),
+            'start' : pygame.mixer.Sound('./tutorial/assets/sounds/title.wav'),
+            'level1' : pygame.mixer.Sound('./tutorial/assets/sounds/level1.wav'),
+            'level2' : pygame.mixer.Sound('./tutorial/assets/sounds/level2.wav'),
+            'level3' : pygame.mixer.Sound('./tutorial/assets/sounds/level3.wav'),
+            'ending' : pygame.mixer.Sound('./tutorial/assets/sounds/ending.wav'),
         }
         
     def play_music(self, music_name):
